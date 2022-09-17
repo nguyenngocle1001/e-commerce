@@ -8,5 +8,6 @@
     "/api/": {
       "origin": "${API_URL}"
     }
-  }
+  },
+  "stack": 20
 }
