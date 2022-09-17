@@ -1,0 +1,4 @@
+@baseURL=http://localhost:8000/api/v1/statistical
+
+### GET ORDER
+GET {{baseURL}}/orders

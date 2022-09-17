@@ -1,0 +1,17 @@
+@baseURL=http://localhost:8000/api/v1
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDE3ZjY2ZjBjYjlhOGVmNjg2YTZhOCIsImlhdCI6MTY0MTcxMzExNiwiZXhwIjoxNjQxNzIwMzE2fQ.R_XeJawnCBliGY4r-l53pOlUT0vabW2Owqus5fmqgt0
+
+### Log in
+POST {{baseURL}}/login
+Content-Type: application/json
+
+{
+    "email": "nguyenngocle1001@gmail.com",
+    "password": "test1234"
+}
+
+
+### GET CART
+GET {{baseURL}}/carts/me
+Authorization: Bearer {{token}}
+

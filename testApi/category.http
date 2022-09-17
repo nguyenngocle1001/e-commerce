@@ -1,0 +1,37 @@
+@baseURL=http://localhost:8000/api/v1
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY3OTQyNDMwMDg0Yjg4YjdkMjQyYiIsImlhdCI6MTYzOTQ2NDc3MywiZXhwIjoxNjM5NDcxOTczfQ.fFpGZHULiL0MyfK6hBWFcAdqqaBA9eJq1bBHpW4W2q8
+
+### GET: Get all category
+GET {{baseURL}}/categories?fields=id
+
+
+### GET: Get one category
+GET {{baseURL}}/categories/61bf2f225662070d544c0d0b
+
+### POST: Create category
+POST {{baseURL}}/categories
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "name": "Hat"
+}
+
+### PATCH: Update category
+PATCH {{baseURL}}/categories/61b844d22e214a2fd5f2f110
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "name": "Hit"
+}
+
+
+### DELETE: Soft detele category
+DELETE  {{baseURL}}/categories/61b844d22e214a2fd5f2f110/delete
+Authorization: Bearer {{token}}
+
+### PATCH: Force delete category
+DELETE  {{baseURL}}/categories/61b844d22e214a2fd5f2f110
+Authorization: Bearer {{token}}
+

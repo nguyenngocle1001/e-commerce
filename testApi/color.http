@@ -1,0 +1,40 @@
+@baseURL=http://localhost:8000/api/v1
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY3OTQyNDMwMDg0Yjg4YjdkMjQyYiIsImlhdCI6MTYzOTU3NzkyOCwiZXhwIjoxNjM5NTg1MTI4fQ.GtP_NVjOC_PJUO-Zr3WwRwA5CFV0D4KO6M48L_4RcIw
+
+
+### GET: Get all category
+GET {{baseURL}}/colors/with-products
+
+### GET: Get all category
+GET {{baseURL}}/colors
+
+### GET: Get one category
+GET {{baseURL}}/colors/61b940a9d07f5f1abba0cf20
+
+### POST: Create category
+POST {{baseURL}}/colors
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "value": "red"
+}
+
+### PATCH: Update category
+PATCH {{baseURL}}/colors/61b9f9608845cafa9e611276
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "value": "Hit"
+}
+
+
+### DELETE: Soft detele category
+DELETE  {{baseURL}}/colors/61b9f99c8845cafa9e611290/delete
+Authorization: Bearer {{token}}
+
+### PATCH: Force delete category
+DELETE  {{baseURL}}/colors/61b9f9608845cafa9e611276
+Authorization: Bearer {{token}}
+

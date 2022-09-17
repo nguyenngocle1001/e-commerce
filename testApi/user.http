@@ -1,0 +1,196 @@
+@baseURL=http://localhost:8000/api/v1
+@token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxYWY3OTQyNDMwMDg0Yjg4YjdkMjQyYiIsImlhdCI6MTYzODg5MzM0NCwiZXhwIjoxNjM4OTAwNTQ0fQ.8Gz3d9xUL-9-h6bOrOqm9i0vWT7boUBye-0hu3GlGso
+
+### Page not found
+GET http://localhost:8000
+
+### Send Email
+POST {{baseURL}}/forgot-password
+Content-Type: application/json
+
+{
+    "email": "nguyenngocle10011@gmail.com"
+}
+
+### Send Email
+POST {{baseURL}}/reset-password
+Content-Type: application/json
+
+{
+    "token": "58683055269662e1ceaab006d8d7a92ecab61c9890ee297f5d50ba97ad1224ba",
+    "password": "test1234test"
+}
+
+### Send Email forgot password
+GET {{baseURL}}/send-email-forgot
+
+### Sign up
+POST {{baseURL}}/signup
+Content-Type: application/json
+
+{
+    "name": "Nguyen",
+    "address": "KP Phu Hiep 1, phuong Hoa Hiep Trung, Tx Đong Hoa, tinh Phu Yen",
+    "birthday": "01/10/2000",
+    "phone": "0919823185",
+    "email": "nguyenngocle1001@gmail.com",
+    "password": "test1234"
+}
+
+
+### Log in
+POST {{baseURL}}/login
+Content-Type: application/json
+
+{
+    "email": "nguyenngocle10011@gmail.com",
+    "password": "test1234test"
+}
+
+### Log in failed
+POST {{baseURL}}/login
+Content-Type: application/json
+
+{
+    
+}
+
+# ===========================================
+
+### GET ALL USER
+GET {{baseURL}}/users?q=nguyenngocle1001121@gmail.com
+Authorization: Bearer {{token}}
+
+### GET ALL USER with filter
+GET {{baseURL}}/users?role=manager
+Authorization: Bearer {{token}}
+
+### GET ALL USER with sort, desc: `-`field
+GET {{baseURL}}/users?sort=firstName&__v={gte:0}&role=manager
+Authorization: Bearer {{token}}
+
+### GET ALL USER with pagination
+GET {{baseURL}}/users?page=2&limit=2
+Authorization: Bearer {{token}}
+
+### GET ALL USER with limit fields
+GET {{baseURL}}/users?fields=firstName,lastName,gender
+Authorization: Bearer {{token}}
+
+### POST CREATE USER
+POST {{baseURL}}/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "firstName": "Nguyen",
+    "lastName": "Ngoc Le",
+    "address": "KP Phu Hiep 1, phuong Hoa Hiep Trung, Tx Đong Hoa, tinh Phu Yen",
+    "birthday": "01/10/2000",
+    "phone": "0919823185",
+    "email": "nguyenngocle10014@gmail.com",
+    "password": "test1234"
+}
+
+
+
+# ===========================================
+
+### GET USER /users/id
+GET {{baseURL}}/users/61ae2ea72dbd866de9be2946
+Authorization: Bearer {{token}}
+
+### PATCH USER /users/id 
+PATCH {{baseURL}}/users/61ae2ea72dbd866de9be2946
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+    "gender": false
+}
+
+### DELETE USER /users/id 
+DELETE {{baseURL}}/users/61ae2ea72dbd866de9be2946
+Authorization: Bearer {{token}}
+
+### DELETE USER /users/id/delete
+DELETE {{baseURL}}/users/61ae2ea72dbd866de9be2946/delete
+Authorization: Bearer {{token}}
+
+### PATCH USER /users/id/restore 
+PATCH {{baseURL}}/users/61ae2ea72dbd866de9be2946/restore
+Authorization: Bearer {{token}}
+
+
+### GET ME /users/me
+GET {{baseURL}}/users/me
+Authorization: Bearer {{token}}
+
+### UPDATE ME /users/me
+PATCH {{baseURL}}/users/me
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "gender": false
+}
+
+### UPDATE ME /users/me
+PATCH  {{baseURL}}/users/61af71e4e38a94db31b977c6
+Authorization: Bearer {{token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="firstName"
+
+Nguyen2
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="photo"; filename="photo.png"
+Content-Type: image/png
+
+< ./images/photo.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+# ===========================================
+
+
+### Sign up with image
+POST {{baseURL}}/signup
+Authorization: Bearer {{token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="firstName"
+
+Nguyen
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="lastName"
+
+Ngoc Le
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="address"
+
+KP Phu Hiep 1, phuong Hoa Hiep Trung, Tx Đong Hoa, tinh Phu Yen
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="birthday"
+
+01/10/2000
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="phone"
+
+0919823185
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="email"
+
+nguyenngocle1001@gmail.com
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="password"
+
+test1234
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="photo"; filename="photo.png"
+Content-Type: image/png
+
+< ./images/photo.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
