@@ -1,0 +1,10 @@
+.payment-page {
+  padding: 50px 0;
+  background-color: var(--white-color);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}

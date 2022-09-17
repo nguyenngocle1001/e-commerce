@@ -1,0 +1,14 @@
+.form-link {
+  display: block;
+  width: 100%;
+
+  color: var(--text-color);
+
+  font-size: 1.4rem;
+
+  transition: all linear 0.25s;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}

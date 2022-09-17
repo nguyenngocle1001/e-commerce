@@ -1,0 +1,50 @@
+@import "../../../assets/styles/responsive.scss";
+
+.header {
+  background-color: var(--primary-background-color);
+
+  &__container {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    column-gap: 2rem;
+
+    @include responsive-max-tablet() {
+      column-gap: 3rem;
+    }
+
+    @include responsive-mobile() {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__nav-toggle {
+    background-color: transparent;
+    color: var(--primary-text-inner-color);
+
+    border: none;
+    cursor: pointer;
+    transition: all linear 0.25s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+
+    &__icon {
+      font-size: 2.2rem;
+    }
+
+    @include responsive-pc() {
+      display: none;
+    }
+  }
+
+  &__search {
+    @include responsive-mobile() {
+      order: 1;
+      margin-top: 16px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.message {
+  display: block;
+  font-size: 1.4rem;
+
+  &.success {
+    color: var(--success-color);
+  }
+
+  &.error {
+    color: var(--error-color);
+  }
+}

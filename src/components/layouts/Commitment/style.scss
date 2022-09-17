@@ -1,0 +1,60 @@
+.commitment {
+  padding: 43px 18px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 0 15px;
+  }
+
+  &__icon svg {
+    font-size: 5rem;
+    color: var(--primary-color);
+
+    &:hover {
+      animation: swing-commitment 0.7s ease-out 0s 1 normal forwards running;
+    }
+  }
+
+  &__title {
+    margin: 12px 0 8px;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+  }
+
+  &__desc {
+    color: var(--primary-text-color);
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+
+@keyframes swing-commitment {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}

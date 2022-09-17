@@ -1,0 +1,67 @@
+@import "../../../assets/styles/responsive.scss";
+
+.topbar {
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--primary-background-color);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 0;
+
+    @include responsive-mobile() {
+      justify-content: center;
+    }
+  }
+
+  &__message {
+    margin: 0;
+
+    font-size: 1.3rem;
+
+    color: var(--primary-text-inner-color);
+
+    @include responsive-mobile() {
+      display: none;
+    }
+
+    strong {
+      font-size: inherit;
+      color: var(--yellow-color);
+    }
+  }
+
+  &__menu {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    &__item {
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+    }
+
+    &__link {
+      font-size: 1.3rem;
+
+      color: var(--primary-text-inner-color);
+
+      text-transform: capitalize;
+      transition: all linear 0.25s;
+
+      &:hover {
+        color: var(--primary-color);
+      }
+
+      &.active {
+        cursor: default;
+        color: var(--primary-color);
+        pointer-events: none;
+      }
+    }
+  }
+}

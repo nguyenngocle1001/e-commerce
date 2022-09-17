@@ -1,0 +1,27 @@
+.search-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__heading {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+  }
+
+  &__btn-group {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-top: 30px;
+  }
+
+  &__btn {
+    width: 200px;
+    height: 40px;
+  }
+}

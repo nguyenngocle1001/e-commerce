@@ -1,0 +1,18 @@
+.payment-page-group {
+  border: 1px solid var(--border-light-color);
+
+  padding: 20px;
+  border-radius: 3px;
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-top: 10px;
+  }
+}

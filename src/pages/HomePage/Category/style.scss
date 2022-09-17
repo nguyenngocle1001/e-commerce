@@ -1,0 +1,31 @@
+.category {
+  width: 100%;
+  min-height: 100px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: var(--white-color);
+
+  &__link {
+    margin-right: 10px;
+
+    color: var(--text-color);
+
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    transition: all linear 0.25s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &__img {
+    width: 50px;
+  }
+}

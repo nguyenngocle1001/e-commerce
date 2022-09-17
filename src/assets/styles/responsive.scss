@@ -1,0 +1,36 @@
+// Mobile: width < 740px
+// Tablet: 740px <= width < 1024px
+// PC: width >= 1024px
+
+$mobile: 740px;
+$tablet: 1024px;
+
+@mixin responsive-mobile {
+  @media (max-width: #{$mobile - 1px}) {
+    @content;
+  }
+}
+
+@mixin responsive-tablet {
+  @media (min-width: #{$mobile}) and (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin responsive-max-tablet {
+  @media (max-width: #{$tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin responsive-min-tablet {
+  @media (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin responsive-pc {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}

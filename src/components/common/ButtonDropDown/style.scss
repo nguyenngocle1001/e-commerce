@@ -1,0 +1,12 @@
+.button-drop-down {
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    margin-left: 5px;
+  }
+}

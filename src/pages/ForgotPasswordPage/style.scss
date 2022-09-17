@@ -1,0 +1,17 @@
+.forgot-password-page {
+  padding: 50px;
+
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 5px;
+
+    .form__body {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+}

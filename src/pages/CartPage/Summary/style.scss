@@ -1,0 +1,25 @@
+.cart-page-summary {
+  padding: 12px 12px 22px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+  background-color: var(--white-color);
+
+  &__heading {
+    font-size: 2rem;
+    border-bottom: 1px solid var(--border-light-color);
+    padding-bottom: 10px;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__value {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}

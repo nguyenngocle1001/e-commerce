@@ -1,0 +1,124 @@
+// Libraries
+@import "antd/dist/antd.css";
+@import "react-toastify/dist/ReactToastify.css";
+@import "react-loading-skeleton/dist/skeleton.css";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+// Common CSS
+@import "assets/styles/responsive.scss";
+
+// Variables
+:root {
+  --primary-background-color: #19202b;
+  --primary-color: #f03723;
+  --primary-text-inner-color: #fff;
+  --primary-text-color: #555555;
+
+  --border-color: #303741;
+  --border-light-color: #e2e6ef;
+  --error-color: #e02b27;
+  --success-color: #00c851;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --text-color: #222;
+
+  --white-color: #fff;
+  --black-color: #000;
+
+  --gray-1-color: #ddd;
+  --gray-2-color: #f5f5f5;
+  --dark-gray-color: #999999;
+
+  --midnight-color: #232f3e;
+
+  --yellow-color: #fdc801;
+
+  --red-color: #f60000;
+
+  --green-color: #5aab19;
+
+  --box-shadow: 0 -4px 32px rgb(0 0 0 / 20%);
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.6rem;
+
+  box-sizing: inherit;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 50px;
+  }
+}
+
+body {
+  // font-family: Rubik;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1263px;
+  margin: 0 auto;
+
+  padding: 0 1.6rem;
+}
+
+.price::before {
+  content: "₫";
+
+  margin-right: 2px;
+
+  font-size: 0.8em;
+}
+
+@include responsive-mobile() {
+  .tablet {
+    display: none;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .min-tablet {
+    display: none;
+  }
+}
+@include responsive-tablet() {
+  .mobile {
+    display: none;
+  }
+
+  .pc {
+    display: none;
+  }
+}
+
+@include responsive-pc() {
+  .mobile {
+    display: none;
+  }
+
+  .tablet {
+    display: none;
+  }
+
+  .max-tablet {
+    display: none;
+  }
+}

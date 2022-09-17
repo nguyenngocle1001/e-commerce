@@ -1,0 +1,72 @@
+.input-quantity {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin: 10px 0;
+
+  &__control.ant-input-number {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.detail-option {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+
+  &__item {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    background: transparent;
+
+    border: 1px solid var(--border-light-color);
+
+    cursor: pointer;
+
+    &:disabled {
+      color: var(--primary-color);
+      cursor: default;
+    }
+  }
+
+  &:hover &__list {
+    display: flex;
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+    row-gap: 1px;
+
+    background-color: var(--white-color);
+
+    z-index: 2;
+    animation: show-option ease-in 0.25s;
+  }
+}
+
+@keyframes show-option {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,15 @@
+.load-more-button {
+  padding: 8px 0;
+  color: var(--primary-text-color);
+  background-color: transparent;
+
+  border: none;
+
+  transition: all linear 0.25s;
+  cursor: pointer;
+  text-transform: capitalize;
+
+  &:hover {
+    color: var(--primary-color);
+  }
+}

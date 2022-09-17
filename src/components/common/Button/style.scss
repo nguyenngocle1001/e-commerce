@@ -1,0 +1,61 @@
+@import "../../../assets/styles/responsive.scss";
+
+.button {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary-color);
+  color: var(--primary-text-inner-color);
+
+  font-size: 1.3rem;
+  font-weight: 600;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all linear 0.25s;
+
+  @include responsive-tablet {
+    height: 40px;
+  }
+
+  @include responsive-mobile {
+    height: 30px;
+  }
+
+  &:not(:disabled):hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &__loading {
+    animation: loading linear 1s infinite;
+  }
+
+  &.normal {
+    background: var(--white-color);
+    border: 1px solid var(--border-light-color);
+    color: var(--text-color);
+
+    &:hover {
+      border-color: var(--black-color);
+    }
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

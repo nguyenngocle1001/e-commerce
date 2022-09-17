@@ -1,0 +1,50 @@
+.footer-information {
+  margin-top: 30px;
+
+  &__title {
+    margin-bottom: 18px;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+
+    color: var(--white-color);
+
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    row-gap: 8px;
+  }
+
+  &__text,
+  &__link {
+    color: var(--gray-1-color);
+
+    font-size: 1.4rem;
+    line-height: 1.7;
+
+    text-transform: capitalize;
+  }
+
+  .no-capitalize {
+    text-transform: none;
+  }
+
+  &__link {
+    transition: all linear 0.25s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+  &__divider {
+    background-color: var(--border-color);
+    height: 1px;
+    border: none;
+    margin: 12px 0;
+  }
+}

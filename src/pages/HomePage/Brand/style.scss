@@ -1,0 +1,24 @@
+.brand {
+  width: 100%;
+  min-height: 100px;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__name {
+    color: var(--text-color);
+
+    font-size: 3rem;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all linear 0.25s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}

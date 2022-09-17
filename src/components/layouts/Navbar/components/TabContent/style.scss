@@ -1,0 +1,11 @@
+.navbar-tab-content {
+  width: 100%;
+
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--white-color);
+
+  border-radius: 0 0 5px 5px;
+}

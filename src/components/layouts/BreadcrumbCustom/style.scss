@@ -1,0 +1,20 @@
+.breadcrumb.ant-breadcrumb {
+  color: var(--dark-gray-color);
+  margin: 2.3rem 0;
+
+  span,
+  a {
+    font-weight: 500;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    transition: all linear 0.25s;
+
+    a:hover {
+      color: var(--text-color);
+    }
+  }
+
+  .current {
+    color: var(--text-color);
+  }
+}

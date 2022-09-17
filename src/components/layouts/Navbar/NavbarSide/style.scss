@@ -1,0 +1,82 @@
+@import "../../../../assets/styles/responsive.scss";
+
+.navbar-side {
+  position: fixed;
+  inset: 0 60% 0 0;
+
+  background-color: var(--white-color);
+
+  z-index: 200;
+  animation: show-navbar ease-in 0.25s;
+
+  &.unmount {
+    animation: hide-navbar ease-out 0.25s;
+  }
+
+  @include responsive-mobile() {
+    right: 10%;
+  }
+
+  &__close {
+    width: 100%;
+    height: 52px;
+    margin-bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--primary-color);
+    color: var(--primary-text-inner-color);
+
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+
+    &__icon {
+      margin-left: 5px;
+
+      color: var(--primary-text-inner-color);
+
+      font-size: 1.6rem;
+    }
+  }
+
+  &__tab {
+    .menu-listing__item:not(:last-child) {
+      border-bottom: 1px solid var(--border-light-color);
+    }
+
+    &--menu {
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+@keyframes show-navbar {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-1%);
+  }
+  75% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes hide-navbar {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}

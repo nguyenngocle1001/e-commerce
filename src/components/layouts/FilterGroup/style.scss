@@ -1,0 +1,43 @@
+.filter-group {
+  padding: 22px 30px;
+
+  background-color: var(--white-color);
+  border-radius: 5px;
+
+  &__name {
+    position: relative;
+
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      width: 6rem;
+      height: 2px;
+
+      background-color: var(--primary-color);
+
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+
+      height: 2px;
+
+      background-color: var(--border-light-color);
+    }
+  }
+
+  &__body {
+    margin-top: 30px;
+  }
+}

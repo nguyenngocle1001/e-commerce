@@ -1,0 +1,32 @@
+.footer-need-help {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+    color: var(--primary-color);
+    margin-right: 6px;
+  }
+
+  &__desc {
+    &__text {
+      display: block;
+
+      color: var(--dark-gray-color);
+
+      font-size: 1.4rem;
+      line-height: 1.7;
+    }
+
+    &__value {
+      display: block;
+
+      color: var(--primary-color);
+
+      font-size: 2.4rem;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.header-search {
+  width: 100%;
+  max-width: 840px;
+  height: 40px;
+
+  padding: 3px;
+
+  background-color: var(--white-color);
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 3px;
+
+  &__control {
+    flex: 1;
+    padding: 0 10px;
+
+    font-size: 1.4rem;
+
+    border: none;
+    outline: none;
+  }
+
+  &__btn.button {
+    width: 60px;
+    height: 100%;
+
+    &__icon {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.reset-password-page {
+  padding: 50px;
+
+  &__form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+
+    background-color: var(--white-color);
+
+    border-radius: 5px;
+  }
+
+  & .form__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}

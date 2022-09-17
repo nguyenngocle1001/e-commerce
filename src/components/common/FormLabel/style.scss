@@ -1,0 +1,12 @@
+.form-label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-transform: capitalize;
+
+  &.required::after {
+    content: "*";
+    margin-left: 2px;
+    color: var(--error-color);
+  }
+}

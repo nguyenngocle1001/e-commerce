@@ -1,0 +1,17 @@
+.user {
+  position: relative;
+  &__btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__name {
+    margin-left: 5px;
+    font-size: 1.3rem;
+
+    color: var(--white-color);
+  }
+}

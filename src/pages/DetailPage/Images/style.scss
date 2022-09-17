@@ -1,0 +1,35 @@
+.detail-page-images {
+  display: flex;
+  align-items: stretch;
+  padding: 20px;
+
+  &__nav {
+    overflow: hidden auto;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__nav-img {
+    width: 90px;
+    border: 1px solid var(--border-light-color);
+
+    transition: all linear 0.25s;
+    cursor: pointer;
+
+    &.active {
+      border: 2px solid var(--primary-color);
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  &__main {
+    flex: 1;
+  }
+}
